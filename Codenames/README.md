@@ -2,7 +2,7 @@
 
 ## Feature List  
 **Bronze Level Feature Set**  
-- [ ] Deck of 400 different cards/words
+- [x] Deck of 400 different cards/words
 - [ ] Board displays 25 random cards/words from deck on a 5/5 grid
 - [ ] Each card has individual buttons allowing it's color to be made beige with its word displaying or red, blue, tan, or black with its word hidden
 - [ ] A scoreboard shows each team's points
@@ -33,3 +33,6 @@
 - [ ] Users select their team
 - [ ] Users select whether they are the clue giver
 - [ ] The clue givers from each team are given a key card on their screen
+- [ ] Users can select to play different categories of words
+- [ ] Users can choose to play with images
+- [ ] Users can upload their own user images
