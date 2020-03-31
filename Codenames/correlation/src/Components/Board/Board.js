@@ -1,22 +1,32 @@
-import React, { Component } from "react";
-// import Card from "../Card/Card";
+import React from "react";
 import listOfCards from "../../Cards.json";
 
-class Board extends Component {
+class Board extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            words: []
+        };
+        this.handleDeal = this.handleDeal.bind(this);
+    }
+    handleDeal() {
+        let random25 = []
+        while (random25.length < 25) {
+            random25.push(listOfCards[Math.floor(Math.random() * 403)].word)
+        };
+        this.setState({ words: random25 })
+    }
     render() {
-        const cards = listOfCards.map(card => {
+        let cards = this.state.words.map(card => {
             return (
-                <>
-                    <h3>{card.word}</h3>
-                </>
-            );
-        });
+                <h3>{card}</h3>
+            )
+        })
         return (
             <div className="board">
                 <h2>BOARD</h2>
-                <div>
-                    {cards}
-                </div>
+                <button onClick={this.handleDeal}>Deal!</button>
+                {cards}
             </div>
         )
     }
