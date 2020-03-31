@@ -26,7 +26,9 @@ class Board extends React.Component {
             <div className="board">
                 <h2>BOARD</h2>
                 <button onClick={this.handleDeal}>Deal!</button>
-                {cards}
+                <div className="cards">
+                    <h3>{cards}</h3>
+                </div>
             </div>
         )
     }
