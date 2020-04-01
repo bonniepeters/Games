@@ -22,12 +22,10 @@ class Board extends React.Component {
             return (
                 <div className="card">
                     <h3 className="word">{card}</h3>
-                    {/* <div>
-                    </div>
-                    <div>
-                    </div>
-                    <div>
-                    </div> */}
+                    <button className="red-button"></button>
+                    <button className="blue-button"></button>
+                    <button className="beige-button"></button>
+                    <button className="black-button"></button>
                 </div>
             )
         })
