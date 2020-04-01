@@ -1,5 +1,6 @@
 import React from "react";
 import listOfCards from "../../Cards.json";
+import "./Board.css";
 
 class Board extends React.Component {
     constructor(props) {
@@ -12,14 +13,22 @@ class Board extends React.Component {
     handleDeal() {
         let random25 = []
         while (random25.length < 25) {
-            random25.push(listOfCards[Math.floor(Math.random() * 403)].word)
+            random25.push(listOfCards[Math.floor(Math.random() * 400)].word)
         };
         this.setState({ words: random25 })
     }
     render() {
         let cards = this.state.words.map(card => {
             return (
-                <h3>{card}</h3>
+                <div className="card">
+                    <h3 className="word">{card}</h3>
+                    {/* <div>
+                    </div>
+                    <div>
+                    </div>
+                    <div>
+                    </div> */}
+                </div>
             )
         })
         return (
@@ -27,7 +36,7 @@ class Board extends React.Component {
                 <h2>BOARD</h2>
                 <button onClick={this.handleDeal}>Deal!</button>
                 <div className="cards">
-                    <h3>{cards}</h3>
+                    {cards}
                 </div>
             </div>
         )

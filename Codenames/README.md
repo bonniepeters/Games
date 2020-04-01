@@ -3,7 +3,7 @@
 ## Feature List  
 **Bronze Level Feature Set**  
 - [x] Deck of 400 different cards/words
-- [ ] Board displays 25 random cards/words from deck on a 5/5 grid
+- [x] Board displays 25 random cards/words from deck on a 5/5 grid
 - [ ] Each card has individual buttons allowing it's color to be made beige with its word displaying or red, blue, tan, or black with its word hidden
 - [ ] A scoreboard shows each team's points
 - [ ] Each team's score matches the number of cards on the board with their color selected
