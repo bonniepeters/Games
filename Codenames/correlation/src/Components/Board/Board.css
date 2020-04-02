@@ -2,7 +2,35 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 3px;
+    text-transform: capitalize;
 }
-.card {
+
+.beige {
+    background-color: beige;
+}
+
+.button {
+    padding: 8px;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 2px;
+    cursor: pointer;
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.tan {
     background-color: tan;
+}
+
+.black {
+    background-color: black;
 }

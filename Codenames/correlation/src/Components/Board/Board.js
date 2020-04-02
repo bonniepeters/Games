@@ -6,26 +6,30 @@ class Board extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            words: []
+            cards: []
         };
         this.handleDeal = this.handleDeal.bind(this);
+        // this.handleColor = this.handleColor.bind(this);
     }
     handleDeal() {
         let random25 = []
         while (random25.length < 25) {
-            random25.push(listOfCards[Math.floor(Math.random() * 400)].word)
+            random25.push(listOfCards[Math.floor(Math.random() * 400)])
         };
-        this.setState({ words: random25 })
+        this.setState({ cards: random25 })
     }
+    // handleColor(e) {
+    // }
     render() {
-        let cards = this.state.words.map(card => {
+        let cards = this.state.cards.map(card => {
             return (
-                <div className="card">
-                    <h3 className="word">{card}</h3>
-                    <button className="red-button"></button>
-                    <button className="blue-button"></button>
-                    <button className="beige-button"></button>
-                    <button className="black-button"></button>
+                <div className={card.color}>
+                    <h3 className="word">{card.word}</h3>
+                    <button className="button beige"></button>
+                    <button className="button red"></button>
+                    <button className="button blue"></button>
+                    <button className="button tan"></button>
+                    <button className="button black"></button>
                 </div>
             )
         })
