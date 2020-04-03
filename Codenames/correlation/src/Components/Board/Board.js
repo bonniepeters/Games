@@ -1,6 +1,8 @@
 import React from "react";
 import listOfCards from "../../Cards.json";
 import "./Board.css";
+import Card from "../Card/Card"
+import Deal from "../Deal/Deal"
 
 class Board extends React.Component {
     constructor(props) {
@@ -23,20 +25,13 @@ class Board extends React.Component {
     render() {
         let cards = this.state.cards.map(card => {
             return (
-                <div className={card.color}>
-                    <h3 className="word">{card.word}</h3>
-                    <button className="button beige"></button>
-                    <button className="button red"></button>
-                    <button className="button blue"></button>
-                    <button className="button tan"></button>
-                    <button className="button black"></button>
-                </div>
+                <Card card={card}/>
             )
         })
         return (
             <div className="board">
                 <h2>BOARD</h2>
-                <button onClick={this.handleDeal}>Deal!</button>
+                <Deal handleDeal={this.handleDeal}/>
                 <div className="cards">
                     {cards}
                 </div>
